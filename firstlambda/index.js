@@ -9,7 +9,7 @@ exports.handler = function(event, context, callback) {
         console.log(record.eventName);
         console.log('DynamoDB Record: %j', record.dynamodb);
         
-        var search_param = record.dynamodb.Keys.userId.S;
+        var search_param = record.dynamodb.NewImage.title.S;
         var search_param_len = search_param.length;
         console.log('Length is : %j', search_param_len.toString());
         
