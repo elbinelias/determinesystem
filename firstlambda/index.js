@@ -23,7 +23,15 @@ exports.handler = function(event, context, callback) {
 		
 		documentClient.scan(params, function(err, data) {
 		   if (err) console.log(err);
-		   else console.log(data);
+		   else 
+		   {
+		       data.Items.forEach(function(element, index, array) {
+                console.log(element.primary);
+                if (element.primary == "gcp"){
+                    
+                }
+                });
+		   }
 		});
 	    
         
