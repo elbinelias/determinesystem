@@ -9,7 +9,7 @@ async function getGCPdetails(search_param){
     FunctionName: 'GCPDynamoDBRecords',
     InvocationType: 'RequestResponse',
     LogType: 'None',
-    Payload: '{"gcpid":"search_param"}',
+    Payload: JSON.stringify({"gcpid": search_param})
   };
   const response = await lambda.invoke(params).promise();
   if(response.StatusCode !== 200){
