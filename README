@@ -1,0 +1,3 @@
+zip function.zip index.js
+
+aws lambda update-function-code --function-name ProcessDynamoDBRecords --zip-file fileb://function.zip
