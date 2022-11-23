@@ -58,7 +58,6 @@ exports.handler = function(event, context, callback) {
       		     // invoke and get info from `getGCPdetails`
       		     console.log('value %j',check)
                 const gcp = getGCPdetails();
-                console.log('GCP :%j', gcp);
       		   }  
               
         }    
